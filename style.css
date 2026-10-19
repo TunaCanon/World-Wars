@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#header-panel {
+    background-color: #2c2c2c;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+#header-panel h1 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+#stats span {
+    margin-left: 15px;
+    font-size: 0.95rem;
+}
+
+#stats strong {
+    color: #ff9800;
+}
+
+#main-map {
+    flex: 1;
+    background-color: #181818;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    grid-template-rows: repeat(5, 70px);
+    gap: 8px;
+}
+
+.map-tile {
+    background-color: #2a2a2a;
+    border: 2px solid #3a3a3a;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.map-tile:hover {
+    border-color: #4CAF50;
+    background-color: #333;
+}
+
+.map-tile.owned {
+    background-color: #1b3b2b;
+    border-color: #2e7d32;
+    color: #81c784;
+}
+
+#control-panel {
+    background-color: #2c2c2c;
+    padding: 15px 20px;
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #333;
+}
+
+.game-btn {
+    flex: 1;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.game-btn:hover {
+    background-color: #45a049;
+}
+
+.game-btn.secondary {
+    background-color: #d32f2f;
+}
+
+.game-btn.secondary:hover {
+    background-color: #c62828;
+}
