@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Nullius - Strateji Oyunu</title>
+    <title>Terra Nullius - Piksel Strateji</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="game-container">
-        <!-- Üst Bilgi Paneli -->
-        <header id="header-panel">
-            <h1>Terra Nullius</h1>
+        <header id="header">
+            <h2>Terra Nullius / FrontWars</h2>
             <div id="stats">
-                <span>Altın: <strong id="gold-val">100</strong></span>
-                <span>Asker: <strong id="troops-val">10</strong></span>
-                <span>Bölge: <strong id="territory-val">1</strong></span>
+                <span>Altın: <b id="gold-val">100</b></span>
+                <span>Asker: <b id="troop-count">50</b></span>
+                <span>Bölge: <b id="territory-count">25</b></span>
             </div>
         </header>
 
-        <!-- Oyun Alanı / Harita -->
-        <main id="main-map">
-            <div id="grid-container">
-                <!-- Harita kareleri JavaScript ile dinamik eklenecek -->
-            </div>
-        </main>
+        <div id="canvas-wrapper">
+            <canvas id="gameCanvas" width="700" height="450"></canvas>
+        </div>
 
-        <!-- Kontrol / Eylem Paneli -->
-        <footer id="control-panel">
-            <button id="btn-recruit" class="game-btn">Asker Eğit (5 Altın)</button>
-            <button id="btn-expand" class="game-btn">Bölgeyi Genişlet (20 Altın)</button>
-            <button id="btn-end-turn" class="game-btn secondary">Turu Bitir</button>
+        <footer id="controls">
+            <button id="btn-recruit" class="game-btn">Asker Eğit (20 Altın)</button>
+            <div class="slider-group">
+                <label>Saldırı Gücü Oranı: </label>
+                <input type="range" id="attackRatio" min="10" max="100" value="50">
+                <span id="send-percent">50%</span>
+            </div>
         </footer>
     </div>
 
